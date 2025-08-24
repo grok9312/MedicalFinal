@@ -65,13 +65,13 @@ struct CalendarView: View {
                 Spacer()
                 
                 Image(systemName: "chevron.right")
-                                    .foregroundColor(.themePrimaryText)
-                                    .frame(width: 44, height: 44, alignment: .center) // 给予足够大的热区
-                                    .contentShape(Rectangle()) // 定义清晰的点击区域
-                                    .onTapGesture {
-                                        print("右箭頭被點擊 (onTapGesture)")
-                                        changeDate(by: 1)
-                                    }
+                    .foregroundColor(.themePrimaryText)
+                    .frame(width: 44, height: 44, alignment: .center) // 给予足够大的热区
+                    .contentShape(Rectangle()) // 定义清晰的点击区域
+                    .onTapGesture {
+                        print("右箭頭被點擊 (onTapGesture)")
+                        changeDate(by: 1)
+                    }
             }
             .padding(.horizontal)
             .foregroundColor(.themePrimaryText)
