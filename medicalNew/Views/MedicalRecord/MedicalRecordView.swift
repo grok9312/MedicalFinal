@@ -1,5 +1,4 @@
 import SwiftUI
-// import WidgetKit // ✅ 1. 移除 WidgetKit 的導入
 
 // MARK: - Enums
 enum CalendarScope {
@@ -50,11 +49,29 @@ struct CalendarView: View {
     var body: some View {
         VStack(spacing: 10) {
             HStack {
-                Button(action: { changeDate(by: -1) }) { Image(systemName: "chevron.left") }
+                Image(systemName: "chevron.left")
+                    .foregroundColor(.themePrimaryText)
+                    .frame(width: 44, height: 44, alignment: .center) // 给予足够大的热区
+                    .contentShape(Rectangle()) // 定义清晰的点击区域
+                    .onTapGesture {
+                        print("左箭頭被點擊 (onTapGesture)")
+                        changeDate(by: -1)
+                    }
+
                 Spacer()
+                
                 Text(headerString(from: displayDate)).font(.headline)
+                
                 Spacer()
-                Button(action: { changeDate(by: 1) }) { Image(systemName: "chevron.right") }
+                
+                Image(systemName: "chevron.right")
+                                    .foregroundColor(.themePrimaryText)
+                                    .frame(width: 44, height: 44, alignment: .center) // 给予足够大的热区
+                                    .contentShape(Rectangle()) // 定义清晰的点击区域
+                                    .onTapGesture {
+                                        print("右箭頭被點擊 (onTapGesture)")
+                                        changeDate(by: 1)
+                                    }
             }
             .padding(.horizontal)
             .foregroundColor(.themePrimaryText)
@@ -227,6 +244,10 @@ struct MedicalRecordView: View {
                         CalendarView(selectedDate: $selectedDate, displayDate: $displayDate, scope: $calendarScope, appointments: records.map {
                             Appointment(id: $0.id, clinicName: $0.hospital, appointmentTime: $0.appointmentTime)
                         })
+                        .simultaneousGesture(
+                            DragGesture(minimumDistance: 0),
+                            including: .all
+                        )
                     }
                     .listRowBackground(Color.clear)
                     .listRowInsets(EdgeInsets())
