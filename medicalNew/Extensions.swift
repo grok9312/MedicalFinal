@@ -1,6 +1,7 @@
 import SwiftUI
 
-// MARK: - Color Palette
+// MARK: - Helper Extensions
+
 // 擴充 Color 類型，方便統一管理 App 的視覺風格和使用 Hex 色碼
 extension Color {
     /// #e0e4eb - 一種淡雅的灰藍色，適合作為主要背景
@@ -44,7 +45,6 @@ extension Color {
     }
 }
 
-// MARK: - Date Extension
 // 擴充 Date 類型，增加方便的輔助功能
 extension Date {
     /// 回傳該日期的零點（午夜）

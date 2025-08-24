@@ -6,6 +6,11 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		18EF45922E5B26D60030FED3 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18EF45912E5B26D60030FED3 /* WidgetKit.framework */; };
+		18EF45942E5B26D60030FED3 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18EF45932E5B26D60030FED3 /* SwiftUI.framework */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		18204EAC2E580041008BC179 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -23,15 +28,44 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		18EF45A42E5B26D80030FED3 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		18204E9E2E580040008BC179 /* medicalNew.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = medicalNew.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18204EAB2E580041008BC179 /* medicalNewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = medicalNewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		18204EB52E580041008BC179 /* medicalNewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = medicalNewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		18EF458F2E5B26D60030FED3 /* HealthGuardianWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = HealthGuardianWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		18EF45912E5B26D60030FED3 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		18EF45932E5B26D60030FED3 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		18EF45AC2E5B2E4F0030FED3 /* Exceptions for "medicalNew" folder in "HealthGuardianWidgetExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Models/MedicalDataModels.swift,
+			);
+			target = 18EF458E2E5B26D60030FED3 /* HealthGuardianWidgetExtension */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		18204EA02E580040008BC179 /* medicalNew */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				18EF45AC2E5B2E4F0030FED3 /* Exceptions for "medicalNew" folder in "HealthGuardianWidgetExtension" target */,
+			);
 			path = medicalNew;
 			sourceTree = "<group>";
 		};
@@ -69,6 +103,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		18EF458C2E5B26D60030FED3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18EF45942E5B26D60030FED3 /* SwiftUI.framework in Frameworks */,
+				18EF45922E5B26D60030FED3 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -78,6 +121,7 @@
 				18204EA02E580040008BC179 /* medicalNew */,
 				18204EAE2E580041008BC179 /* medicalNewTests */,
 				18204EB82E580041008BC179 /* medicalNewUITests */,
+				18EF45902E5B26D60030FED3 /* Frameworks */,
 				18204E9F2E580040008BC179 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -88,8 +132,18 @@
 				18204E9E2E580040008BC179 /* medicalNew.app */,
 				18204EAB2E580041008BC179 /* medicalNewTests.xctest */,
 				18204EB52E580041008BC179 /* medicalNewUITests.xctest */,
+				18EF458F2E5B26D60030FED3 /* HealthGuardianWidgetExtension.appex */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		18EF45902E5B26D60030FED3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				18EF45912E5B26D60030FED3 /* WidgetKit.framework */,
+				18EF45932E5B26D60030FED3 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -102,6 +156,7 @@
 				18204E9A2E580040008BC179 /* Sources */,
 				18204E9B2E580040008BC179 /* Frameworks */,
 				18204E9C2E580040008BC179 /* Resources */,
+				18EF45A42E5B26D80030FED3 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
@@ -163,6 +218,25 @@
 			productReference = 18204EB52E580041008BC179 /* medicalNewUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		18EF458E2E5B26D60030FED3 /* HealthGuardianWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 18EF45A12E5B26D80030FED3 /* Build configuration list for PBXNativeTarget "HealthGuardianWidgetExtension" */;
+			buildPhases = (
+				18EF458B2E5B26D60030FED3 /* Sources */,
+				18EF458C2E5B26D60030FED3 /* Frameworks */,
+				18EF458D2E5B26D60030FED3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HealthGuardianWidgetExtension;
+			packageProductDependencies = (
+			);
+			productName = HealthGuardianWidgetExtension;
+			productReference = 18EF458F2E5B26D60030FED3 /* HealthGuardianWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -184,6 +258,9 @@
 						CreatedOnToolsVersion = 16.4;
 						TestTargetID = 18204E9D2E580040008BC179;
 					};
+					18EF458E2E5B26D60030FED3 = {
+						CreatedOnToolsVersion = 16.4;
+					};
 				};
 			};
 			buildConfigurationList = 18204E992E580040008BC179 /* Build configuration list for PBXProject "medicalNew" */;
@@ -203,6 +280,7 @@
 				18204E9D2E580040008BC179 /* medicalNew */,
 				18204EAA2E580041008BC179 /* medicalNewTests */,
 				18204EB42E580041008BC179 /* medicalNewUITests */,
+				18EF458E2E5B26D60030FED3 /* HealthGuardianWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -229,6 +307,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		18EF458D2E5B26D60030FED3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -247,6 +332,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		18204EB12E580041008BC179 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18EF458B2E5B26D60030FED3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -395,16 +487,19 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = medicalNew/medicalNew.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = N87226644M;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "App需要您的授權，以便從相簿上傳收據、診斷證明等醫療文件。";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -423,16 +518,19 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = medicalNew/medicalNewRelease.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = N87226644M;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "App需要您的授權，以便從相簿上傳收據、診斷證明等醫療文件。";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -518,6 +616,62 @@
 			};
 			name = Release;
 		};
+		18EF45A22E5B26D80030FED3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = HealthGuardianWidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = N87226644M;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = HealthGuardianWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = HealthGuardianWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = project.medicalNew.HealthGuardianWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		18EF45A32E5B26D80030FED3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = HealthGuardianWidgetExtensionRelease.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = N87226644M;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = HealthGuardianWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = HealthGuardianWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = project.medicalNew.HealthGuardianWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -553,6 +707,15 @@
 			buildConfigurations = (
 				18204EC62E580041008BC179 /* Debug */,
 				18204EC72E580041008BC179 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		18EF45A12E5B26D80030FED3 /* Build configuration list for PBXNativeTarget "HealthGuardianWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18EF45A22E5B26D80030FED3 /* Debug */,
+				18EF45A32E5B26D80030FED3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
