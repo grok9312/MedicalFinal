@@ -6,7 +6,7 @@ struct ContentView: View {
         TabView {
             MedicalRecordView()
                 .tabItem {
-                    Label("行-事曆", systemImage: "heart.text.square.fill")
+                    Label("行事曆", systemImage: "heart.text.square.fill")
                 }
 
             MedicalDocumentsView()
